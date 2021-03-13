@@ -10,6 +10,7 @@ class ListNode
         ListNode();
         ListNode(T data);
         ~ListNode();
+        
         ListNode *next;
         ListNode *prev;
         T data;

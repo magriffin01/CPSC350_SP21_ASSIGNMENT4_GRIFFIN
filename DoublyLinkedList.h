@@ -12,11 +12,13 @@ class DoublyLinkedList
     public:
         DoublyLinkedList();
         ~DoublyLinkedList();
+
         void insertFront(T data);
         T removeFront();
         bool isEmpty();
         int getSize();
         T getFrontData();
+        
         void printList();
 
     private:
