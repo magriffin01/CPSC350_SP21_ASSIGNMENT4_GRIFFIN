@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include <exception>
 #include "GenStack.h"
 
 using namespace std;
@@ -13,7 +14,8 @@ class RPNCalc
         RPNCalc();
         ~RPNCalc();
 
-        void getUserInput();
+        void run();
+        
         // Handle Input
         // Handle Operator
         // Handle Operand
@@ -25,8 +27,11 @@ class RPNCalc
         GenStack<int> *operandStack;
         string input;
 
+        void getUserInput();
+        void handleUserInput(string input);
         bool isOperand(string input);
         bool isOperator(string input);
+        void performOperation(string input);
 
 };
 

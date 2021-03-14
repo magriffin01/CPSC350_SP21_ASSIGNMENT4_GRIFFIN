@@ -6,7 +6,8 @@ using namespace std;
 int main(int argc, char **argv)
 {
     RPNCalc *calc = new RPNCalc();
-    calc->getUserInput();
+    calc->run();
+    
 
     delete calc;
     return 0;
