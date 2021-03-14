@@ -19,6 +19,7 @@ class GenStack
         bool isEmpty();
         int getSize();
 
+        void clearStack();
         void printStack();
 
     private:
@@ -80,6 +81,15 @@ template <typename T>
 int GenStack<T>::getSize()
 {
     return stackSize;
+}
+
+template <typename T>
+void GenStack<T>::clearStack()
+{
+    while (!isEmpty())
+    {
+        pop();
+    }
 }
 
 template <typename T>
