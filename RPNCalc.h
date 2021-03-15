@@ -15,13 +15,6 @@ class RPNCalc
         ~RPNCalc();
 
         void run();
-        
-        // Handle Input
-        // Handle Operator
-        // Handle Operand
-        // Perform Calculation
-        // Display prompt
-        // Run the Calculator
 
     private:
         GenStack<int> *operandStack;
@@ -33,7 +26,6 @@ class RPNCalc
         bool isOperator(string input);
         void performOperation(string input);
         void clearCalculatorHistory();
-
 };
 
 #endif
