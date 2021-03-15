@@ -5,9 +5,9 @@
 using namespace std;
 
 int main(int argc, char **argv)
-{
+{  
     string arg = argv[1];
-
+    
     if (arg == "RPN")
     {
         RPNCalc *calc = new RPNCalc();
@@ -21,6 +21,10 @@ int main(int argc, char **argv)
         FileProcessor *fileProcessor = new FileProcessor();
         fileProcessor->processFile(filePath, "dnaoutput.txt");
         delete fileProcessor;
+    }
+    else
+    {
+        cout << "Invalid command line argument. Either type \"RPN\" or \"DNA\"" << endl;
     }
 
     return 0;
