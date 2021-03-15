@@ -32,6 +32,7 @@ class RPNCalc
         bool isOperand(string input);
         bool isOperator(string input);
         void performOperation(string input);
+        void clearCalculatorHistory();
 
 };
 
