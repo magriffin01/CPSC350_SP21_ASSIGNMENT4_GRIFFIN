@@ -16,7 +16,7 @@ void DNAComplement::run()
 
     getUserSequence();
     cout << "Complement: " << computeSequenceComplement(userSequence) << endl;
-    cout << "Reverse Complement: " << computeReverseComplement() << endl;
+    cout << "Reverse Complement: " << computeReverseComplement(userSequence) << endl;
 }
 
 bool DNAComplement::isValidSequence()
@@ -32,15 +32,15 @@ bool DNAComplement::isValidSequence()
     return true;
 }
 
-string DNAComplement::computeReverseComplement()
+string DNAComplement::computeReverseComplement(string sequence)
 {
     string reversedSequence = "";
 
-    for (int i = 0; i < userSequence.size(); ++i)
+    for (int i = 0; i < sequence.size(); ++i)
     {
-        nucleotides->push(userSequence[i]);
+        nucleotides->push(sequence[i]);
     }
-    for (int i = 0; i < userSequence.size(); ++i)
+    for (int i = 0; i < sequence.size(); ++i)
     {
         reversedSequence += nucleotides->pop();
     }
@@ -84,7 +84,7 @@ char DNAComplement::computeNucleotideComplement(char nucleotide)
             break;
 
         default:
-            complement = '!';
+            complement = '@';
             break;
     }
 

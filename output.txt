@@ -1,0 +1,15 @@
+Complement: TAAGCTA@
+Reverse Complement: @ATCGAAT
+
+Complement: ATTCGAT@
+Reverse Complement: @TAGCTTA
+
+Complement: TAGCTTA@
+Reverse Complement: @ATTCGAT
+
+Complement: TCAAGGTTAC@
+Reverse Complement: @CATTGGAACT
+
+Complement: TTTTTGGATA
+Reverse Complement: ATAGGTTTTT
+

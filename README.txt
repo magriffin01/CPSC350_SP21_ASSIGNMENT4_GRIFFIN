@@ -13,7 +13,8 @@ a.
 
 4. A LIST OF ALL REFERENCES USED TO COMPLETE THIS ASSIGNMENT, INCLUDING PEERS (IF APPLICABLE)
 a. https://www.programiz.com/cpp-programming/string-int-conversion
-b. 
+b. Zybook C++ Programming Textbook
+c. 
 
 5. INSTRUCTIONS FOR RUNNING THIS ASSIGNMENT
 a. Run "make all"

@@ -15,6 +15,8 @@ class DNAComplement
         ~DNAComplement();
 
         void run();
+        string computeReverseComplement(string sequence);
+        string computeSequenceComplement(string sequence);
 
         // Compute complement
         // Compute reverse complement
@@ -24,8 +26,6 @@ class DNAComplement
         string userSequence;
 
         bool isValidSequence();
-        string computeReverseComplement();
-        string computeSequenceComplement(string sequence);
         char computeNucleotideComplement(char nucleotide);
 
         // Temporary for testing the function of the class, convert for FILES after
