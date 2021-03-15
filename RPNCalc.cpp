@@ -120,12 +120,16 @@ void RPNCalc::performOperation(string input)
         {
             throw runtime_error("0 entered as divisor");
         }
-        
+
         result = leftValue / rightValue;
         operandStack->push(result);
     }
     else if (input == "%")
     {
+        if (rightValue == 0)
+        {
+            throw runtime_error("0 entered as divisor");
+        }
         result = leftValue % rightValue;
         operandStack->push(result);
     }
