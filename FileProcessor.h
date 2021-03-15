@@ -1,3 +1,11 @@
+/*
+# Name: Mark Griffin
+# ID Number: 2340502
+# Email: magriffin@chapman.edu
+# Course: CPSC350-01
+# Assignment: Assignment 4
+*/
+
 #ifndef FILEPROCESSOR_H
 #define FILEPROCESSOR_H
 
@@ -22,6 +30,7 @@ class FileProcessor
         void openOutputFile(string outputFile);
         void writeOutputFile();
         void closeOutputFile(string outputFile);
+
         ifstream inputStream;
         ofstream outputStream;
         DNAComplement *dna;

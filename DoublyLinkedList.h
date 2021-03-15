@@ -1,3 +1,11 @@
+/*
+# Name: Mark Griffin
+# ID Number: 2340502
+# Email: magriffin@chapman.edu
+# Course: CPSC350-01
+# Assignment: Assignment 4
+*/
+
 #ifndef DOUBLYLINKEDLIST_H
 #define DOUBLYLINKEDLIST_H
 
@@ -25,7 +33,6 @@ class DoublyLinkedList
         ListNode<T> *head;
         ListNode<T> *tail;
         int listSize;
-
 };
 
 template <typename T>

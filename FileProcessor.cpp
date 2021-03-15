@@ -1,3 +1,11 @@
+/*
+# Name: Mark Griffin
+# ID Number: 2340502
+# Email: magriffin@chapman.edu
+# Course: CPSC350-01
+# Assignment: Assignment 4
+*/
+
 #include "FileProcessor.h"
 
 FileProcessor::FileProcessor()
@@ -10,7 +18,6 @@ FileProcessor::~FileProcessor()
     delete dna;
 }
 
-// Takes a string for the input file and output file, reads the english file, and writes the translation to the output file
 void FileProcessor::processFile(string inputFile, string outputFile)
 {
     openInputFile(inputFile);
@@ -21,7 +28,6 @@ void FileProcessor::processFile(string inputFile, string outputFile)
     closeOutputFile(outputFile);
 }
 
-// Reads the input file and puts the english text into a string
 void FileProcessor::readInputFile()
 {
     string sequence;
@@ -31,14 +37,6 @@ void FileProcessor::readInputFile()
 
     while (!inputStream.fail())
     {
-        // FIXME: Delete before turning in
-        // for (int i = 0; i < sequence.size(); ++i)
-        // {
-        //     if (sequence[i] == '\r')
-        //     {
-        //         cout << "carriage return found" << endl;
-        //     }
-        // }
         if (!dna->isValidSequence(sequence))
         {
             cout << "Invalid sequence in the input file on line: " << i << " ....SKIPPING" << endl;
@@ -59,13 +57,11 @@ void FileProcessor::readInputFile()
     }
 }
 
-// Writes to the output file from the tutneseText string
 void FileProcessor::writeOutputFile()
 {
     outputStream << dnaComplements;
 }
 
-// Takes a string for the inputFile and attempts to open it
 void FileProcessor::openInputFile(string inputFile)
 {
     cout << "Attempting to open " << inputFile << endl;
@@ -82,7 +78,6 @@ void FileProcessor::openInputFile(string inputFile)
     }
 }
 
-// Takes a string for the outputFile and attempts to open it
 void FileProcessor::openOutputFile(string outputFile)
 {
     cout << "Attempting to open " << outputFile << endl;
@@ -99,7 +94,6 @@ void FileProcessor::openOutputFile(string outputFile)
     }
 }
 
-// Takes a string for the inputFile and attempts to close it
 void FileProcessor::closeInputFile(string inputFile)
 {
     cout << "Closing " << inputFile << endl;
@@ -107,7 +101,6 @@ void FileProcessor::closeInputFile(string inputFile)
     inputStream.close();
 }
 
-// Takes a string for the outputFile and attempts to close it
 void FileProcessor::closeOutputFile(string outputFile)
 {
     cout << "Closing " << outputFile << endl;

@@ -1,3 +1,11 @@
+/*
+# Name: Mark Griffin
+# ID Number: 2340502
+# Email: magriffin@chapman.edu
+# Course: CPSC350-01
+# Assignment: Assignment 4
+*/
+
 #include "DNAComplement.h"
 
 DNAComplement::DNAComplement()
@@ -39,7 +47,6 @@ string DNAComplement::computeReverseComplement(string sequence)
     {
         reversedSequence += nucleotides->pop();
     }
-
 
     return computeSequenceComplement(reversedSequence);
 }
@@ -83,7 +90,7 @@ char DNAComplement::computeNucleotideComplement(char nucleotide)
             break;
 
         default:
-            complement = '@';
+            complement = '@'; // Tells the user an error occurred
             break;
     }
 

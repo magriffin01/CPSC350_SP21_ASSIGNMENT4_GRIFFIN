@@ -1,3 +1,11 @@
+/*
+# Name: Mark Griffin
+# ID Number: 2340502
+# Email: magriffin@chapman.edu
+# Course: CPSC350-01
+# Assignment: Assignment 4
+*/
+
 #ifndef LISTNODE_H
 #define LISTNODE_H
 
@@ -16,7 +24,6 @@ class ListNode
         T data;
 
     private:
-
 
 };
 

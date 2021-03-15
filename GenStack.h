@@ -1,3 +1,11 @@
+/*
+# Name: Mark Griffin
+# ID Number: 2340502
+# Email: magriffin@chapman.edu
+# Course: CPSC350-01
+# Assignment: Assignment 4
+*/
+
 #ifndef GENSTACK_H
 #define GENSTACK_H
 
@@ -25,7 +33,6 @@ class GenStack
     private:
         DoublyLinkedList<T> *linkedList;
         int stackSize;
-
 };
 
 template <typename T>
