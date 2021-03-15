@@ -25,21 +25,31 @@ void FileProcessor::processFile(string inputFile, string outputFile)
 void FileProcessor::readInputFile()
 {
     string sequence;
+    int i = 1;
 
     getline(inputStream, sequence);
 
     while (!inputStream.fail())
     {
-        for (int i = 0; i < sequence.size(); ++i)
+        // FIXME: Delete before turning in
+        // for (int i = 0; i < sequence.size(); ++i)
+        // {
+        //     if (sequence[i] == '\r')
+        //     {
+        //         cout << "carriage return found" << endl;
+        //     }
+        // }
+        if (!dna->isValidSequence(sequence))
         {
-            if (sequence[i] == '\r')
-            {
-                cout << "carriage return found" << endl;
-            }
+            cout << "Invalid sequence in the input file on line: " << i << " ....SKIPPING" << endl;
+            getline(inputStream, sequence);
+            ++i;
+            continue;
         }
         dnaComplements += "Complement: " + dna->computeSequenceComplement(sequence) + "\n";
         dnaComplements += "Reverse Complement: " + dna->computeReverseComplement(sequence) + "\n";
         dnaComplements += "\n";
+        ++i;
         getline(inputStream, sequence);
     }
 

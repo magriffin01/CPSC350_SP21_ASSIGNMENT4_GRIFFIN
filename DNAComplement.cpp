@@ -10,20 +10,15 @@ DNAComplement::~DNAComplement()
     delete nucleotides;
 }
 
-void DNAComplement::run()
+bool DNAComplement::isValidSequence(string sequence)
 {
-    cout << "You have selected the DNA Complement program." << endl << endl;
-
-    getUserSequence();
-    cout << "Complement: " << computeSequenceComplement(userSequence) << endl;
-    cout << "Reverse Complement: " << computeReverseComplement(userSequence) << endl;
-}
-
-bool DNAComplement::isValidSequence()
-{
-    for (int i = 0; i < userSequence.size(); ++i)
+    for (int i = 0; i < sequence.size(); ++i)
     {
-        if ((userSequence[i] != 'A') && (userSequence[i] != 'C') && (userSequence[i] != 'T') && (userSequence[i] != 'G'))
+        if (sequence[i] == '\r')
+        {
+            continue;
+        }
+        if ((sequence[i] != 'A') && (sequence[i] != 'C') && (sequence[i] != 'T') && (sequence[i] != 'G'))
         {
             return false;
         }
@@ -55,6 +50,10 @@ string DNAComplement::computeSequenceComplement(string sequence)
 
     for (int i = 0; i < sequence.size(); ++i)
     {
+        if (sequence[i] == '\r')
+        {
+            continue;
+        }
         sequenceComplement += computeNucleotideComplement(sequence[i]);
     }
 
@@ -89,16 +88,4 @@ char DNAComplement::computeNucleotideComplement(char nucleotide)
     }
 
     return complement;
-}
-
-void DNAComplement::getUserSequence()
-{
-    cout << "Enter a DNA sequence:" << endl;
-    cin >> userSequence;
-
-    while (!isValidSequence())
-    {
-        cout << "Not a valid sequence, please input a valid sequence:" << endl;
-        cin >> userSequence;
-    }
 }
